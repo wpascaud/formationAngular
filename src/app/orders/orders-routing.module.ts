@@ -6,10 +6,10 @@ import { AddOrdersComponent } from './containers/add-orders/add-orders.component
 
 
 const routes: Routes = [
-  {path:'orders',redirectTo: 'orders/list', pathMatch : 'full'},
-{path:'orders/list',component:ListOrdersComponent},
-{path:'orders/edit/:id',component:EditOrdersComponent},
-{path:'orders/add',component:AddOrdersComponent}];
+  {path:'',redirectTo: 'list', pathMatch : 'full'},
+{path:'list',component:ListOrdersComponent},
+{path:'edit/:id',component:EditOrdersComponent},
+{path:'add',component:AddOrdersComponent}];
 
 
 

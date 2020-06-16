@@ -1,0 +1,14 @@
+<!-- <ng-content select='h1'></ng-content> -->
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" *ngFor="let header of headers">{{ header }}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <ng-content select='tr'></ng-content>
+  </tbody>
+</table>
+

@@ -22,29 +22,45 @@
 <text text-anchor="start" x="429.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_LoginModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="163,-70 163,-195 333,-195 333,-70 163,-70"/>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="94,-70 94,-195 402,-195 402,-70 94,-70"/>
 </g>
-<g id="clust3" class="cluster">
+<g id="clust2" class="cluster">
+<title>cluster_LoginModule_declarations</title>
+<polygon fill="none" stroke="#000000" points="264,-78 264,-130 394,-130 394,-78 264,-78"/>
+</g>
+<g id="clust4" class="cluster">
 <title>cluster_LoginModule_imports</title>
-<polygon fill="none" stroke="#000000" points="171,-78 171,-130 325,-130 325,-78 171,-78"/>
+<polygon fill="none" stroke="#000000" points="102,-78 102,-130 256,-130 256,-78 102,-78"/>
 </g>
-<!-- LoginRoutingModule -->
+<!-- LoginComponent -->
 <g id="node1" class="node">
-<title>LoginRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="317.1108,-122 314.1108,-126 293.1108,-126 290.1108,-122 178.8892,-122 178.8892,-86 317.1108,-86 317.1108,-122"/>
-<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoginRoutingModule</text>
+<title>LoginComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="386.2758,-122 271.7242,-122 271.7242,-86 386.2758,-86 386.2758,-122"/>
+<text text-anchor="middle" x="329" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoginComponent</text>
 </g>
 <!-- LoginModule -->
 <g id="node2" class="node">
 <title>LoginModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="294.493,-187 291.493,-191 270.493,-191 267.493,-187 201.507,-187 201.507,-151 294.493,-151 294.493,-187"/>
-<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoginModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="300.493,-187 297.493,-191 276.493,-191 273.493,-187 207.507,-187 207.507,-151 300.493,-151 300.493,-187"/>
+<text text-anchor="middle" x="254" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoginModule</text>
+</g>
+<!-- LoginComponent&#45;&gt;LoginModule -->
+<g id="edge1" class="edge">
+<title>LoginComponent&#45;&gt;LoginModule</title>
+<path fill="none" stroke="#000000" d="M286.0544,-122.1061C286.0544,-122.1061 286.0544,-140.991 286.0544,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="282.5544,-140.9909 286.0544,-150.991 289.5544,-140.991 282.5544,-140.9909"/>
+</g>
+<!-- LoginRoutingModule -->
+<g id="node3" class="node">
+<title>LoginRoutingModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="248.1108,-122 245.1108,-126 224.1108,-126 221.1108,-122 109.8892,-122 109.8892,-86 248.1108,-86 248.1108,-122"/>
+<text text-anchor="middle" x="179" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoginRoutingModule</text>
 </g>
 <!-- LoginRoutingModule&#45;&gt;LoginModule -->
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 <title>LoginRoutingModule&#45;&gt;LoginModule</title>
-<path fill="none" stroke="#000000" d="M248,-122.1061C248,-122.1061 248,-140.991 248,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="244.5001,-140.9909 248,-150.991 251.5001,-140.991 244.5001,-140.9909"/>
+<path fill="none" stroke="#000000" d="M227.7795,-122.1061C227.7795,-122.1061 227.7795,-140.991 227.7795,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="224.2795,-140.9909 227.7795,-150.991 231.2795,-140.991 224.2795,-140.9909"/>
 </g>
 </g>
 </svg>

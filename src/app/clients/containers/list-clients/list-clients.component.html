@@ -1,1 +1,13 @@
 <p>list-clients works!</p>
+<app-button text="Add a client" (BtnSubmitted)="goToAddClient()"></app-button>
+
+<app-tableau [headers]="['Name', 'email', 'Statut']">
+  <h1>Hello je suis la</h1>
+  <tr>
+    <th>William</th>
+    <th>william.pascaud@test.fr</th>
+    <th>activee</th>
+  </tr>
+
+
+</app-tableau>

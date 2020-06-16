@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +10,8 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
+
+  public date = moment().format();
   ngOnInit(): void {
   }
 

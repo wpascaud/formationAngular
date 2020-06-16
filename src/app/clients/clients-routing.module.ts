@@ -6,10 +6,10 @@ import { AddClientComponent } from './containers/add-client/add-client.component
 
 
 const routes: Routes = [
-  {path:'clients',redirectTo: 'clients/list', pathMatch : 'full'},
-  {path:'clients/list',component:ListClientsComponent},
-  {path:'clients/edit/:id',component:EditClientComponent},
-  {path:'clients/add',component:AddClientComponent}
+  {path:'',redirectTo: 'list', pathMatch : 'full'},
+  {path:'list',component:ListClientsComponent},
+  {path:'edit/:id',component:EditClientComponent},
+  {path:'add',component:AddClientComponent}
 ];
 
 

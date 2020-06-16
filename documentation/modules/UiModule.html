@@ -218,13 +218,15 @@ import { UiComponent } from &#x27;./containers/ui/ui.component&#x27;;
 import { HeaderComponent } from &#x27;./components/header/header.component&#x27;;
 import { FooterComponent } from &#x27;./components/footer/footer.component&#x27;;
 import { NavComponent } from &#x27;./components/nav/nav.component&#x27;;
+import { RouterModule } from &#x27;@angular/router&#x27;;
 
 
 
 @NgModule({
   declarations: [UiComponent, HeaderComponent, FooterComponent, NavComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports:[UiComponent]
 })

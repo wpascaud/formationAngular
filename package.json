@@ -8,7 +8,8 @@
     "test": "ng ntest",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "generateDoc": "compodoc -p tsconfig.json -o -s"
+    "generateDoc": "compodoc -p tsconfig.json -o -s",
+    "bundleAnalyze": "ng build --prod --stats-json && webpack-bundle-analyzer dist/crm/stats-es2015.json"
   },
   "private": true,
   "dependencies": {
@@ -23,8 +24,10 @@
     "@angular/router": "~9.1.11",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
     "bootstrap": "^4.4.0",
+    "moment": "^2.26.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "webpack-bundle-analyzer": "^3.8.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

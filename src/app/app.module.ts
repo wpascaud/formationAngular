@@ -8,9 +8,6 @@ import { UiModule } from './ui/ui.module';
 import { CoreModule } from './core/core.module';
 import { IconsModule } from './icons/icons.module';
 import { TextModule } from './text/text.module';
-import { ClientsModule } from './clients/clients.module';
-import { OrdersModule } from './orders/orders.module';
-import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
@@ -20,16 +17,13 @@ import { Router } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     LoginModule,
     UiModule,
     CoreModule,
     IconsModule,
     TextModule,
-    ClientsModule,
-    OrdersModule,
-    PageNotFoundModule,
-    NgbModule
+    NgbModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
