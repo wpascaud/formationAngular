@@ -28,6 +28,6 @@ export class ClientService {
   }
 
   public add(client:Client){
-    return  this.http.post<Client>(`${environment.urlApi}/clients}`, client);
+    return  this.http.post<Client>(`${environment.urlApi}/clients`, client);
   }
 }
