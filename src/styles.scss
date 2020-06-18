@@ -1,8 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+@import "theme";
 
-a.nav-link.active{
-  color:red;
+a.nav-link.active {
+  color: red;
+}
+
+.state-active {
+  background: $color1;
+}
+.state-inactive {
+  background: $color2;
 }

@@ -82,7 +82,7 @@ const routes: Routes &#x3D; [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,
-    {preloadingStrategy:PreloadAllModules}
+    {preloadingStrategy:PreloadAllModules, enableTracing:true}
   )],
   exports: [RouterModule]
 })

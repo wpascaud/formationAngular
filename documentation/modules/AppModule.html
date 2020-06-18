@@ -268,7 +268,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
-import { NgModule } from &#x27;@angular/core&#x27;;
+import { NgModule, LOCALE_ID } from &#x27;@angular/core&#x27;;
 
 import { AppRoutingModule } from &#x27;./app-routing.module&#x27;;
 import { AppComponent } from &#x27;./app.component&#x27;;
@@ -279,13 +279,19 @@ import { IconsModule } from &#x27;./icons/icons.module&#x27;;
 import { TextModule } from &#x27;./text/text.module&#x27;;
 import { NgbModule } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
+import { HttpClientModule } from &#x27;@angular/common/http&#x27;;
+
+import { registerLocaleData } from &#x27;@angular/common&#x27;;
+import localeFr from &#x27;@angular/common/locales/fr&#x27;;
+
+// second parametre optional
+registerLocaleData(localeFr, &#x27;fr-FR&#x27;);
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
     LoginModule,
     UiModule,
     CoreModule,
@@ -294,12 +300,20 @@ import { Router } from &#x27;@angular/router&#x27;;
     NgbModule,
     AppRoutingModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: LOCALE_ID, useValue: &#x27;fr_FR&#x27; }
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { // Diagnostic only: inspect router configuration
-  constructor(router: Router) { // Use a custom replacer to display function names in the route configs
-    const replacer &#x3D; (key, value) &#x3D;&gt; (typeof value &#x3D;&#x3D;&#x3D; &#x27;function&#x27;) ? value.name : value; console.log(&#x27;Routes: &#x27;, JSON.stringify(router.config, replacer, 2)); } }
+export class AppModule {
+  // Diagnostic only: inspect router configuration
+  constructor(router: Router) {
+    // Use a custom replacer to display function names in the route configs
+    const replacer &#x3D; (key, value) &#x3D;&gt;
+      typeof value &#x3D;&#x3D;&#x3D; &#x27;function&#x27; ? value.name : value;
+    console.log(&#x27;Routes: &#x27;, JSON.stringify(router.config, replacer, 2));
+  }
+}
 </code></pre>
     </div>
 </div>

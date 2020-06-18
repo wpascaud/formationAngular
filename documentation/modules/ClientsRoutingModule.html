@@ -75,13 +75,15 @@ import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { EditClientComponent } from &#x27;./containers/edit-client/edit-client.component&#x27;;
 import { ListClientsComponent } from &#x27;./containers/list-clients/list-clients.component&#x27;;
 import { AddClientComponent } from &#x27;./containers/add-client/add-client.component&#x27;;
+import { AdminGuard } from &#x27;../shared/guards/admin.guard&#x27;;
+import { ClientListResolverService } from &#x27;../shared/guards/client-list-resolver.service&#x27;;
 
 
 const routes: Routes &#x3D; [
   {path:&#x27;&#x27;,redirectTo: &#x27;list&#x27;, pathMatch : &#x27;full&#x27;},
-  {path:&#x27;list&#x27;,component:ListClientsComponent},
+  {path:&#x27;list&#x27;,component:ListClientsComponent, resolve:{clients:ClientListResolverService}},
   {path:&#x27;edit/:id&#x27;,component:EditClientComponent},
-  {path:&#x27;add&#x27;,component:AddClientComponent}
+  {path:&#x27;add&#x27;,component:AddClientComponent, canActivate : [AdminGuard]}
 ];
 
 

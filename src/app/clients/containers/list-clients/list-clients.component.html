@@ -1,13 +1,25 @@
-<p>list-clients works!</p>
-<app-button text="Add a client" (BtnSubmitted)="goToAddClient()"></app-button>
+<app-template-a title="Les clients" subtitle="Liste des clients">
+  <app-button text="Add a client" (BtnSubmitted)="goToAddClient()"></app-button>
 
-<app-tableau [headers]="['Name', 'email', 'Statut']">
-  <h1>Hello je suis la</h1>
-  <tr>
-    <th>William</th>
-    <th>william.pascaud@test.fr</th>
-    <th>activee</th>
-  </tr>
+  <ng-container *ngIf="clients.length > 0; else NoData">
+    <app-tableau [headers]="['Name', 'email', 'Statut', 'CA']">
+      <tr *ngFor="let client of clients">
+        <th>{{ client.name | uppercase }}</th>
+        <th>{{ client.email }}</th>
+        <th appState [state]="client.state">
+          {{ client.state | star }}
+          <select [(ngModel)]="client.state" class="form-control" (change)="updateClient($event, client)">
+            <option [value]="state" *ngFor="let state of clientStates">
+              {{state }}
+            </option>
+          </select>
+        </th>
+        <th>{{ client.ca | currency: "EUR" }}</th>
+      </tr>
+    </app-tableau>
+  </ng-container>
 
-
-</app-tableau>
+  <ng-template #NoData>
+    <h1>il n'y a pas de client</h1>
+  </ng-template>
+</app-template-a>

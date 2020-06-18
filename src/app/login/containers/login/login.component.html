@@ -1,3 +1,18 @@
-<p>
-  login works!
-</p>
+<!-- <button class="bnt btn-primary" (click)="up()">+</button>
+<button class="bnt btn-primary" (click)="down()">-</button> -->
+
+<form (ngSubmit)="register()" #formLogin="ngForm">
+  <div>
+    <label>Username</label>
+    <input type="text" name="username" [(ngModel)]="user.username" required />
+    <small>{{ user.username }}</small>
+  </div>
+
+  <div>
+    <label>Password</label>
+    <input type="password" name="password" [(ngModel)]="user.password" />
+  </div>
+
+  <h1>Le formulaire est-il valide ? {{ formLogin.valid }}</h1>
+  <button class="bnt btn-primary" type='submit' [disabled]="formLogin.invalid">Register</button>
+</form>

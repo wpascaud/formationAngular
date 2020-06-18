@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,13 +10,19 @@ import { IconsModule } from './icons/icons.module';
 import { TextModule } from './text/text.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+// second parametre optional
+registerLocaleData(localeFr, 'fr-FR');
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
     LoginModule,
     UiModule,
     CoreModule,
@@ -25,9 +31,17 @@ import { Router } from '@angular/router';
     NgbModule,
     AppRoutingModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr_FR' }
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { // Diagnostic only: inspect router configuration
-  constructor(router: Router) { // Use a custom replacer to display function names in the route configs
-    const replacer = (key, value) => (typeof value === 'function') ? value.name : value; console.log('Routes: ', JSON.stringify(router.config, replacer, 2)); } }
+export class AppModule {
+  // Diagnostic only: inspect router configuration
+  constructor(router: Router) {
+    // Use a custom replacer to display function names in the route configs
+    const replacer = (key, value) =>
+      typeof value === 'function' ? value.name : value;
+    console.log('Routes: ', JSON.stringify(router.config, replacer, 2));
+  }
+}
